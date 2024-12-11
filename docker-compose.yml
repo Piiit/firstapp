@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    ports:
+      - "${PORT}:8080"
+    env_file:
+      - .env
+    environment:
+      - ENV_FROM_DOCKER_COMPOSE=Environment variable set in docker-compose

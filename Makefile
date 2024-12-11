@@ -10,3 +10,11 @@ install:
 .PHONY=run
 run:
 	python3 src/main.py
+
+.PHONY=dockerbuild
+dockerbuild:
+	docker build -t flask-app .
+
+.PHONY=dockerrun
+dockerrun:
+	docker run -p 5000:8080 flask-app
