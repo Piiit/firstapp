@@ -1,0 +1,4 @@
+---
+- src: git+https://github.com/Piiit/ansible-docker-installation.git
+  version: "v2"
+

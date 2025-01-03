@@ -1,15 +1,13 @@
 services:
   app:
-    image: firstapp-dev
-    container_name: firstapp-dev
+    image: firstapp-prod
+    container_name: firstapp-prod
     build:
       context: .
-      target: development
+      target: production
     ports:
       - "${PORT}:${PORT}"
     env_file:
       - .env
-    volumes:
-      - ./src/:/app
     environment:
       - ENV_FROM_DOCKER_COMPOSE=Environment variable set in docker-compose.yml
